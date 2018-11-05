@@ -6,7 +6,6 @@
 // For each element in the array, the callback we passed is called. The callback can be customized, but in the above example, the callback prints out the element, index, and entire array.
 function forEach(array, callback) {
 }
-
 // Creates an array of values by running each element in collection through callback
 // Should we explain that map returns?
 // Callback (element/value, index/key, array)
