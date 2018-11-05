@@ -46,7 +46,7 @@ console.log (multiply(5, 3));
 // multiplies all three inputted numbers together
 // ex: multiplyy(1,2,3); -> 6
 // ex: multiplyy(2,2,3); -> 12
-function multiplyy(a, b, c) {
+function muhttps://github.com/ironhack-labs/lab-es6-javascript-koans.gitltiplyy(a, b, c) {
     return ((a * b)* c)
 }
 console.log (multiplyy(3,9,2));
