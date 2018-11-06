@@ -40,6 +40,9 @@ findMax([1, 25, 6, 3]);
  * trim(' hello '); -> 'hello'
  */
 function trim(string) {
-  return string.trim();
+    let str = string.slice(1, 6)
+    return str;
+    
+  //return string.trim();
 }
 trim(' hello ');
