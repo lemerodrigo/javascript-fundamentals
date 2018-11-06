@@ -53,7 +53,7 @@ multiplyy(3, 3, 3);
 // returns the square of the inputted number
 // ex: square(5); -> 25
 function square(value) {
-  return value * value;
+  return value ** value;
 }
 square(4);
 
@@ -99,27 +99,27 @@ positive(10);
 // isNumber(5); → true
 // isNumber('hi'); → false
 function isNumber(value) {
-  return !isNaN(value);
+  return typeof value === 'number';
 }
 console.log(isNumber('txt'));
 // Returns boolean of whether argument is classified as an Array object
 // isArray(5); → false
 // isArray([1,2,3]); → true
 function isArray(value) {
-  // return value;
+  return typeof value === 'number';
 }
 isArray([1, 2, 3]);
 // Returns boolean of whether argument is classified as an Object
 // isObject(5); → false
 // isObject([1,2,3]); → true
 function isObject(value) {
-  // return value;
+  return typeof value === 'object';
 }
 isObject([1, 2, 3]);
 // return boolean of whether argument is classified as null
 // isNull(null); -> true
 // isNull(5); -> false
 function isNull(value) {
-  // return value;
+  return value === null;
 }
 isNull(null);
