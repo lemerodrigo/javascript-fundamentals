@@ -5,7 +5,12 @@
 // forEach(['a','b','c'], callback); → prints a,0,[1,2,3] b,1,[1,2,3] c,2,[1,2,3]
 // For each element in the array, the callback we passed is called. The callback can be customized, but in the above example, the callback prints out the element, index, and entire array.
 function forEach(array, callback) {
+    return array.forEach((element, idx, array) =>{ 
+        console.log(`a, ${idx}, ${element}, ${array}`);
+    })
 }
+
+
 
 // Creates an array of values by running each element in collection through callback
 // Should we explain that map returns?
@@ -15,6 +20,7 @@ function forEach(array, callback) {
 // }); -> [3,6,9]
 // BONUS: use the forEach method you use to create map
 function map(array, callback) {
+    return array.map(el => el * 3);
 }
 
 // Iterates over elements of collection, returning an Array of all elements callback returns truthy for.
@@ -25,12 +31,17 @@ function map(array, callback) {
 //  return element % 2 !== 0;
 // }); → [1,3]
 function filter(collection, callback) {
+
+return collection.filter(even => even % 2 === 0);
+
+
 }
 
 // Creates an array without duplicate values from the inputted array.
 // The order of the array is preserved.
 // uniq([1,2,1]); → [1,2]
 function uniq(array) {
+    return [...new Set(array)];
 }
 
 // Gets the index at which the first occurrence of value is found in array
