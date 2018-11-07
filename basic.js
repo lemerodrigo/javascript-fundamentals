@@ -2,14 +2,14 @@
 // ex: addTwo(5); -> 7
 // ex: addTwo(6); -> 8
 function addTwo(number) {
-  number += 2;
+  number + 2;
   return number;
 }
 
 // adds the two inputted numbers together
 // ex: add(5, 10); -> 15
 function add(num1, num2) {
-  return totalAdd = num1 + num2;
+  return num1 + num2;
 }
 
 // adds all three inputted numbers together
@@ -29,7 +29,7 @@ function subtract(n1, n2) {
 // ex: multiplyByTwo(5); -> 10
 // ex: multiplyByTwo(6); -> 12
 function multiplyByTwo(numero) {
-  return numero *= 2;
+  return numero * 2;
 }
 
 // multplies the two inputted numbers together
@@ -49,7 +49,7 @@ function multiplyy(a, b, c) {
 // returns the square of the inputted number
 // ex: square(5); -> 25
 function square(value) {
-  return value = value * value;
+  return Math.pow(value, 2);
 }
 
 // determines if the number is odd
@@ -60,8 +60,6 @@ function square(value) {
 function isOdd(num) {
   if (num % 2 === 0) {
     return true;
-  } else {
-    return false;
   }
 }
 

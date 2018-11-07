@@ -6,9 +6,9 @@ function returnOdds(array) {
   for (i=0; i<array.length; i++) {
     if (array[i] % 2 != 0) {
       oddsArray.push(i);
-      console.log(oddsArray);
     }
   }
+  return oddsArray;
 }
 
 // this function accepts an array of numbers
@@ -19,16 +19,16 @@ function returnEvens(array) {
   for (i=0; i<array.length; i++) {
     if (array[i] % 2 === 0) {
       oddsArray.push(i);
-      console.log(oddsArray);
     }
   }
+  return oddsArray;
 }
 
 // returns only the max element from the inputted array of numbers
 // ex: findMax([1,25,6,3]); -> 25
 function findMax(array) {
-  return Math.max.apply(null, array);
   console.log(array);
+  return Math.max.apply(null, array);
 }
 
 /**
@@ -36,7 +36,7 @@ function findMax(array) {
  * trim(' hello '); -> 'hello'
  */
 function trim(string) {
-  let newString = string.replace(/ /gi, "");
-  console.log(newString);
+  newString = string.replace(/ /gi, "");
+  return newString;
 }
 
