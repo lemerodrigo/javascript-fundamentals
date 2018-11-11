@@ -4,24 +4,28 @@
 // }
 // forEach(['a','b','c'], callback); → prints a,0,[1,2,3] b,1,[1,2,3] c,2,[1,2,3]
 // For each element in the array, the callback we passed is called. The callback can be customized, but in the above example, the callback prints out the element, index, and entire array.
-const callback = (element, index, array) => {
-  console.log(`${element} , ${index} ,  [${array}] `);
-};
-const forEach = (array, callback) => {
-  for (let i = 0; i < array.length; i += 1)callback(array[i], i, array);
-};
-forEach(['a', 'b', 'c'], callback);
+// const callback = (element, index, array) => {
+//   console.log(`${element} , ${index} ,  [${array}] `);
+// };
+// const forEach = (array, callback) => {
+//   for (let i = 0; i < array.length; i += 1)callback(array[i], i, array);
+// };
+// forEach(['a', 'b', 'c'], callback);
 
 // // Creates an array of values by running each element in collection through callback
 // // Should we explain that map returns?
-Callback (element/value, index/key, array)
-map([1,2,3], function(element, index, array) {
- return element * 3;
-}); -> [3,6,9]
-BONUS: use the forEach method you use to create map
-function map(array, callback) {
-  return array.map(el => el * 3);
-}
+const callbackMap = (elem, key, array) => {
+  console.log(`[${array}]`);
+};
+const map = (array, callbackMap) => {
+  let mapedArray = [];
+  for (let i = 0; i < array.length; i += 1) {
+    mapedArray[i] = array[i] * 3;
+  }
+  callbackMap(mapedArray[this.i], this.i, mapedArray);
+};
+map([3, 6, 9], callbackMap);
+
 
 // // Iterates over elements of collection, returning an Array of all elements callback returns truthy for.
 // // filter([1,2,3,4], function(element, index, collection) {
