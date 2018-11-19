@@ -145,10 +145,7 @@ function isObject(value) {
 // isNull(null); -> true
 // isNull(5); -> false
 function isNull(value) {
-  if (typeof value === 'object') {
-    return true;
-  }
-  return false;
+  return value === null;
 }
 
 // console.log(isNull(null));

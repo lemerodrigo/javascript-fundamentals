@@ -5,7 +5,12 @@
 // forEach(['a','b','c'], callback); → prints a,0,[1,2,3] b,1,[1,2,3] c,2,[1,2,3]
 // For each element in the array, the callback we passed is called. The callback can be customized, but in the above example, the callback prints out the element, index, and entire array.
 function forEach(array, callback) {
+  let callback = function(element, index, array) {
+    console.log(element + "," + index + "," + array);
+    }
 }
+
+forEach(['a', 'b', 'c'], callback);
 
 // Creates an array of values by running each element in collection through callback
 // Should we explain that map returns?
@@ -15,6 +20,7 @@ function forEach(array, callback) {
 // }); -> [3,6,9]
 // BONUS: use the forEach method you use to create map
 function map(array, callback) {
+
 }
 
 // Iterates over elements of collection, returning an Array of all elements callback returns truthy for.

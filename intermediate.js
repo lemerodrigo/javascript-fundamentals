@@ -4,12 +4,7 @@
 let oddArr = [];
 
 function returnOdds(array) {
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 2 !== 0) {
-      oddArr.push(array[i]);
-    }
-  }
-  return oddArr;
+  return array.filter(evenArr => evenArr % 2 !== 0);
 }
 
 // console.log(returnOdds([1, 2, 3, 4, 5, 6, 7]));
@@ -20,12 +15,7 @@ function returnOdds(array) {
 let evenArr = [];
 
 function returnEvens(array) {
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 2 === 0) {
-      evenArr.push(array[i]);
-    }
-  }
-  return evenArr;
+  return array.filter(evenArr => evenArr % 2 === 0);
 }
 
 // console.log(returnEvens([1, 2, 3, 4, 5, 6, 7]));
@@ -33,12 +23,10 @@ function returnEvens(array) {
 // returns only the max element from the inputted array of numbers
 // ex: findMax([1,25,6,3]); -> 25
 function findMax(array) {
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > array[i + 1]) {
-      return array[i];
-    }
-    return array[i + 1];
-  }
+  const max = array.reduce((a, b) => {
+    return Math.max(a, b);
+  });
+  return max;
 }
 
 // console.log(findMax([1, 25, 6, 3]));
@@ -48,8 +36,7 @@ function findMax(array) {
  * trim(' hello '); -> 'hello'
  */
 function trim(string) {
-  let trimmed = string.trim();
-  return trimmed;
+  return string.slice(1, (string.length - 1));
 }
 
-// console.log(trim(' hello '));
+// console.log(trim(' hello '))
