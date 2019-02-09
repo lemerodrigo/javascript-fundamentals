@@ -54,8 +54,8 @@ function square(value) {
 // determines if the number is odd
 // outputs true if the number is odd
 // outputs false if the number is even
-// ex: isOdd(4); -> false
-// ex: isOdd(5); -> true
+// ex: isOdd(4); -> true
+// ex: isOdd(5); -> false
 function isOdd(num) {
   if (num % 2 === 0) {
     return true;
