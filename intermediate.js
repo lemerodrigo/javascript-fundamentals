@@ -15,7 +15,7 @@ function returnEvens(array) {
 // returns only the max element from the inputted array of numbers
 // ex: findMax([1,25,6,3]); -> 25
 function findMax(array) {
-  return array.reduce((accumulator, currentValue) => Math.max(accumulator, currentValue));
+  return Math.max(...array);
 }
 
 /**
@@ -23,5 +23,5 @@ function findMax(array) {
  * trim(' hello '); -> 'hello'
  */
 function trim(string) {
-  return string.slice(1, -1);
+  return [...string].filter((value) => value !== ' ');
 }

@@ -9,20 +9,20 @@ function addTwo(number) {
 // adds the two inputted numbers together
 // ex: add(5, 10); -> 15
 function add(num1, num2) {
-  return [...arguments].reduce((accumulator, currentValue) => accumulator + currentValue);
+  return num1 + num2;
 }
 
 // adds all three inputted numbers together
 // ex: addd(1,2,3); -> 6
 // ex: addd(2,4,2); -> 8
 function addd(value1, value2, value3) {
-  return [...arguments].reduce((accumulator, currentValue) => accumulator + currentValue);
+  return value1 + value2 + value3;
 }
 
 // subtracts the second inputted number from the first inputted number
 // ex: subtract(5, 10); -> -5
 function subtract(n1, n2) {
-  return [...arguments].reduce((accumulator, currentValue) => accumulator - currentValue);
+  return n1 - n2;
 }
 
 // multiplies the inputted number by 2
@@ -36,14 +36,14 @@ function multiplyByTwo(numero) {
 // ex: multiply(1,2); -> 2
 // ex: multiply(2,2); -> 4
 function multiply(val1, val2) {
-  return [...arguments].reduce((accumulator, currentValue) => accumulator * currentValue);
+  return val1 * val2;
 }
 
 // multiplies all three inputted numbers together
 // ex: multiplyy(1,2,3); -> 6
 // ex: multiplyy(2,2,3); -> 12
 function multiplyy(a, b, c) {
-  return [...arguments].reduce((accumulator, currentValue) => accumulator * currentValue);
+  return a * b * c;
 }
 
 // returns the square of the inputted number

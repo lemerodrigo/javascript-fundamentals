@@ -4,10 +4,13 @@
 // }
 // forEach(['a','b','c'], callback); → prints a,0,[1,2,3] b,1,[1,2,3] c,2,[1,2,3]
 // For each element in the array, the callback we passed is called. The callback can be customized, but in the above example, the callback prints out the element, index, and entire array.
-function forEach(array) {
-  return array.forEach((value, index, array) => {
-    console.log(`${value}, ${index}, ${array}`);
-  })
+function forEach(array, callback) {
+  callback = function (value, index, array) {
+    return `${value, index, array}`;
+  }
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i], i, array)
+  }
 }
 
 // Creates an array of values by running each element in collection through callback
@@ -17,10 +20,17 @@ function forEach(array) {
 //  return element * 3;
 // }); -> [3,6,9]
 // BONUS: use the forEach method you use to create map
-function map(array) {
-  return array.map((value) => (value * 3));
+function map(array, callback) {
+  const arrayMap = []
+  callback = function (value, index, array) {
+    arrayMap.push(value * 3)
+    return arrayMap;
+  }
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i], i, array)
+  }
+  return arrayMap
 }
-
 
 // Iterates over elements of collection, returning an Array of all elements callback returns truthy for.
 // filter([1,2,3,4], function(element, index, collection) {
@@ -29,8 +39,18 @@ function map(array) {
 // filter({a: 1, b: 2,c: 3,d: 4}, function(element, index, collection) {
 //  return element % 2 !== 0;
 // }); → [1,3]
-function filter(collection) {
-  return collection.filter((value) => (value & 1) === 0);
+function filter(collection, callback) {
+  const arrayFilter = [];
+  callback = function (value, index, collection) {
+    if (value % 2 === 0) {
+      arrayFilter.push(value)
+    }
+    return arrayFilter;
+  }
+  for (let i = 0; i < collection.length; i++) {
+    callback(collection[i], i, collection)
+  }
+  return arrayFilter;
 }
 
 // Creates an array without duplicate values from the inputted array.
@@ -46,7 +66,14 @@ function uniq(array) {
 // indexOf([11,22,33], 11); → 0
 // indexOf([11,22,33], 5); → -1
 function indexOf(array, value) {
-  return array.indexOf(value);
+  let indexOf = -1;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      indexOf = i
+      break;
+    }
+  }
+  return indexOf;
 }
 
 // Reduces collection to a value which is the accumulated result of running each element in collection through iteratee, where each successive invocation is supplied the return value of the previous. If accumulator is not provided the first element of collection is used as the initial value.
@@ -57,6 +84,17 @@ function indexOf(array, value) {
 // reduce([1,2], function(stored,current) {
 //  return stored + current;
 // },1); → 4
-function reduce(array) {
-  return array.reduce((accumulator, currentValue) => (accumulator + currentValue));
+function reduce(array, callback, start) {
+  let reducedValue = 0
+  if (start !== undefined) {
+    array.unshift(start)
+  }
+  callback = function (accumulator, currentValue) {
+    return accumulator + currentValue;
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    reducedValue += callback(0, array[i])
+  }
+  return reducedValue
 }
