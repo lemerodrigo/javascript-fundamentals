@@ -93,7 +93,7 @@ function isArray(value) {
 
 // Returns boolean of whether argument is classified as an Object
 // isObject(5); → false
-// isObject([1,2,3]); → true
+// isObject([1,2,3]); → false
 function isObject(value) {
 
 }
