@@ -57,7 +57,7 @@ function square(value) {
 // ex: isOdd(4); -> true
 // ex: isOdd(5); -> false
 function isOdd(num) {
-  if (num % 2 === 0) {
+  if (num % 2 !== 0) {
     return true;
   }
   return false;

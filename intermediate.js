@@ -4,7 +4,7 @@
 function returnOdds(array) {
   const result = [];
   array.forEach((element) => {
-    if (element % 2 === 0) {
+    if (element % 2 !== 0) {
       result.push(element);
     }
   });
@@ -17,7 +17,7 @@ function returnOdds(array) {
 function returnEvens(array) {
   const result = [];
   array.forEach((element) => {
-    if (element % 2 !== 0) {
+    if (element % 2 === 0) {
       result.push(element);
     }
   });
@@ -36,5 +36,11 @@ function findMax(array) {
  * trim(' hello '); -> 'hello'
  */
 function trim(string) {
-  return string.trim();
+  let result = '';
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] !== ' ') {
+      result += string[i];
+    }
+  }
+  return result;
 }
