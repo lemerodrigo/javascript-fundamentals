@@ -14,6 +14,13 @@ function returnOdds(array) {
 // and returns an array of only the even numbers
 // ex: returnEvent([1,2,3,4,5,6,7]); -> [2,4,6]
 function returnEvens(array) {
+	newArr = [];
+	for(let i = 0; i < array.length; i +=1){
+		if((array[i] % 2 === 0)){
+			newArr.push(array[i]);
+		}
+	}
+	return newArr;
 }
 
 // returns only the max element from the inputted array of numbers
