@@ -57,7 +57,10 @@ function n(value){
 // ex: isOdd(4); -> true
 // ex: isOdd(5); -> false
 function isOdd(num) {
-
+   if(num % 2 === 0){
+     return true;
+   }
+   return false;
 }
 
 // determines if the number is negative
@@ -67,14 +70,17 @@ function isOdd(num) {
 // ex: isNegative(1); -> false
 // ex: isNegative(0); -> false
 function isNegative(num) {
-
+   if(num < 0){
+     return true;
+   } 
+   return false;
 }
 
 // returns the absolute value of the inputted number
 // ex: positive(-1); -> 1
 // ex: positive(1); -> 1
 function positive(num) {
-
+   return Math.abs(num);
 }
 
 // Returns boolean of whether argument is classified as a Number object
