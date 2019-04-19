@@ -87,14 +87,20 @@ function positive(num) {
 // isNumber(5); → true
 // isNumber('hi'); → false
 function isNumber(value) {
-
+    if(typeof value === 'number'){
+      return true
+    }
+  return false; 
 }
 
 // Returns boolean of whether argument is classified as an Array object
 // isArray(5); → false
 // isArray([1,2,3]); → true
 function isArray(value) {
-
+   if(Array.isArray(value)){
+     return true
+   }
+    return false;
 }
 
 // Returns boolean of whether argument is classified as an Object
