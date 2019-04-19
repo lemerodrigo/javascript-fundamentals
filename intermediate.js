@@ -2,8 +2,14 @@
 // and returns an array of only the odd numbers
 // ex: returnOdds([1,2,3,4,5,6,7]); -> [1,3,5,7]
 function returnOdds(array) {
+	newArr = [];
+	for(let i = 0; i < array.length; i +=1){
+		if(!(array[i] % 2 === 0)){
+			newArr.push(array[i]);
+		}
+	}
+	return newArr;
 }
-
 // this function accepts an array of numbers
 // and returns an array of only the even numbers
 // ex: returnEvent([1,2,3,4,5,6,7]); -> [2,4,6]
