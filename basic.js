@@ -107,7 +107,10 @@ function isArray(value) {
 // isObject(5); → false
 // isObject([1,2,3]); → false
 function isObject(value) {
-
+    if(typeof value === 'object'){
+      return true
+    }
+    return false; 
 }
 
 // return boolean of whether argument is classified as null
