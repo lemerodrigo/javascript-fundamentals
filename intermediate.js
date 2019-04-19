@@ -26,6 +26,9 @@ function returnEvens(array) {
 // returns only the max element from the inputted array of numbers
 // ex: findMax([1,25,6,3]); -> 25
 function findMax(array) {
+	let max;
+	max = Math.max(...array);
+	return max;
 }
 
 /**
