@@ -114,5 +114,8 @@ function isObject(value) {
 // isNull(null); -> true
 // isNull(5); -> false
 function isNull(value) {
-
+    if(value === null){
+      return true
+    }
+    return false; 
 }
