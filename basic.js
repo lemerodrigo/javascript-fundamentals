@@ -67,7 +67,7 @@ console.log('Func 10 -->', isNegative(-1));
 // ex: positive(-1); -> 1
 // ex: positive(1); -> 1
 const positive = num => (num < 0) ? num * 0 - num : num;
-console.log('Func 11 -->', positive(-1));
+console.log('Func 11 -->', positive(-7));
 
 // Returns boolean of whether argument is classified as a Number object
 // isNumber(5); → true
