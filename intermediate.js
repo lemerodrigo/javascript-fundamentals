@@ -36,4 +36,12 @@ function findMax(array) {
  * trim(' hello '); -> 'hello'
  */
 function trim(string) {
+	let newStr = "";
+	for(let i = 0; i < string.length; i +=1){
+		if(string[i] !== " "){
+			newStr += string[i];
+		}
+	}
+	return newStr;
 }
+
