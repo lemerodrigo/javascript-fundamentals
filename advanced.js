@@ -5,6 +5,9 @@
 // forEach(['a','b','c'], callback); → prints a,0,[1,2,3] b,1,[1,2,3] c,2,[1,2,3]
 // For each element in the array, the callback we passed is called. The callback can be customized, but in the above example, the callback prints out the element, index, and entire array.
 function forEach(array, callback) {
+  for (let i = 0; i < array.length; i += 1) {
+    callback(array[i], i, array);
+  }
 }
 
 // Creates an array of values by running each element in collection through callback
@@ -15,7 +18,13 @@ function forEach(array, callback) {
 // }); -> [3,6,9]
 // BONUS: use the forEach method you use to create map
 function map(array, callback) {
+  const result = forEach(array, callback);
+  return result;
 }
+
+console.log(map([1, 2, 3], (element, index, array) => {
+  return element * 3;
+ }));
 
 // Iterates over elements of collection, returning an Array of all elements callback returns truthy for.
 // filter([1,2,3,4], function(element, index, collection) {
@@ -31,6 +40,15 @@ function filter(collection, callback) {
 // The order of the array is preserved.
 // uniq([1,2,1]); → [1,2]
 function uniq(array) {
+  for (let i = array.length - 1; i >= 0; i -= 1) {
+    for (let j = i - 1; j >= 0; j -= 1) {
+      if (array[i] === array[j]) {
+        array.splice(i, 1);
+        break;
+      }
+    }
+  }
+  return array;
 }
 
 // Gets the index at which the first occurrence of value is found in array
@@ -39,6 +57,10 @@ function uniq(array) {
 // indexOf([11,22,33], 11); → 0
 // indexOf([11,22,33], 5); → -1
 function indexOf(array, value) {
+  if (array.includes(value)) {
+    return 0;
+  }
+  return -1;
 }
 
 // Reduces collection to a value which is the accumulated result of running each element in collection through iteratee, where each successive invocation is supplied the return value of the previous. If accumulator is not provided the first element of collection is used as the initial value.
