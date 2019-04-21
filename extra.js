@@ -2,31 +2,43 @@
 
 // 1. Write a literal object called obj with 3 properties.
 
-// code here
+const obj = {
+  brand: 'Porsche',
+  model: 911,
+  color: 'black',
+};
 
 // ######################################### //
 
 // 2. Write an array called arrEx2 with length 3.
 
-// code here
+const arrEx2 = ['Porsche', 911, 'black', 'turbo'];
 
 // ######################################### //
 
 // 3. Write a loop using for structure that prints all positive numbers until 48 (including 48).
 
-// code here
+for (let i = 0; i <= 48; i += 1) {
+  console.log(i);
+}
 
 // ######################################### //
 
 // 4. Write a loop using for structure that prints all negative numbers until -30 (excluding).
 
-// code here
+for (let i = -1; i > -30; i -= 1) {
+  console.log(i);
+}
+
 
 // ######################################### //
 
 // 5. Write a loop using for structure that prints all numbers from 102 (including) to 32 (including) in steps of 2.
 
-// code here
+for (let i = 102; i >= 32; i -= 2) {
+  console.log(i);
+}
+
 
 // ######################################### //
 
@@ -34,7 +46,8 @@
 
 const arrEx6 = [2, 4, 6, 7, 9, 12];
 
-// code here
+const add2 = arrEx6 => arrEx6.map(value => value + 2);
+
 
 // ######################################### //
 
